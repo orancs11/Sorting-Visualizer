@@ -21,5 +21,8 @@ public class Visualizer extends JFrame{
         this.add(c);
     }
 
+    public static void createBarPlot(int[] arr){
+        return;
+    }
 
 }

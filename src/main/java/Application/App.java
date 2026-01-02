@@ -25,5 +25,7 @@ public class App
         Visualizer visualizer = new Visualizer("Visualizerr", 300, 400);
         visualizer.display();
 
+
+
     }
 }
