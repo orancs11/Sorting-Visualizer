@@ -2,7 +2,6 @@ package Interface;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class BarPanel extends JPanel {
     private static final Color BACKGROUND_COLOR = Color.black;
@@ -34,6 +33,8 @@ public class BarPanel extends JPanel {
     public void clearPanel(){
         this.removeAll();
     }
+
+
 
 
 }
