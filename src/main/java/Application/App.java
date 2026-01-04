@@ -22,12 +22,10 @@ public class App
         Sorter.selectionSort(numbers);
         System.out.println("Sorted version");
         Sorter.display(numbers);
-        Visualizer visualizer = new Visualizer("Visualizerr", 300, 400);
-        BarPanel panel = new BarPanel();
-        visualizer.add(panel);
-        visualizer.display();
-        panel.prepareEnv(300, 400);
 
+        Visualizer visualizer = new Visualizer("Visualizerr", 300, 400);
+        visualizer.display();
+        visualizer.createBarPlot(numbers);
 
     }
 }

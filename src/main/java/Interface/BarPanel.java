@@ -15,12 +15,11 @@ public class BarPanel extends JPanel{
 
     public void prepareEnv(int width, int height){
         Graphics g = this.getGraphics();
-        g.setColor(BACKGROUND_COLOR);
-        g.fillRect(0, 0, width, height); // Fill rectangle where upper left x and y points is 0 and covers all the frame with width and height
+        g.setColor(Color.red);
+        g.drawRect(2, 3, 100, 100); // Fill rectangle where upper left x and y points is 0 and covers all the frame with width and height
     }
 
     public void createBars(int[] arr, Graphics g){
-        new Rectangle();
         g.setColor(BAR_COLOR);
         int height, x, y;
         x = 10;

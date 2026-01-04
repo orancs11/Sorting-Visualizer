@@ -10,7 +10,6 @@ public class Visualizer extends JFrame{
         super(title.isEmpty() ? "Visualizer" : title);
         this.setSize(width, height);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Terminate program when clicked on 'x'
-
     }
 
     public void display(){
@@ -21,8 +20,9 @@ public class Visualizer extends JFrame{
         this.add(c);
     }
 
-    public static void createBarPlot(int[] arr){
-        return;
+    public void createBarPlot(int[] arr){
+     return;
     }
+
 
 }
