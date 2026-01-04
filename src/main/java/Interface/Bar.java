@@ -7,6 +7,7 @@ public class Bar extends JComponent{
     private int width, height, x, y;
     private Color color;
     private Dimension d;
+
     public Bar(int width, int height, int x, int y, Color color){
         super();
         this.d = new Dimension(width, height);
