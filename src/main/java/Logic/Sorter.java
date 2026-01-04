@@ -9,16 +9,6 @@ public class Sorter {
                 if(arr[j] > arr[j + 1]) swap(arr, i, j);
     }
 
-    public static void print(int[] arr){
-        String message = "";
-        for(int i = 0; i < arr.length; i++){
-            if(i == arr.length - 1) message = String.valueOf(arr[i]);
-            else message = arr[i] + ", ";
-            System.out.print(message);
-        }
-        System.out.println();
-    }
-
     public static void selectionSort(int[] arr){
         int size = arr.length;
         for(int i = 0; i < size; i++){

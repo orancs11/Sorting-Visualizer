@@ -34,10 +34,10 @@ public class Utilities {
     }
 
     public static String toStringArray(int[] arr){
-        String result = "{";
+        StringBuilder result = new StringBuilder("{");
         for(int i = 0; i < arr.length; i++){
             if(i + 1 == arr.length) break;
-            else result = arr[i] + ", ";
+            else result.append(arr[i]).append(", ");
         }
         return result + "}";
     }
