@@ -39,12 +39,15 @@ public class Sorter {
             for(int j = i + 1; j < size - 1; j++)
                 if(copyTarget[j] < copyTarget[minIndex]) minIndex = j;
             swap(i, minIndex);
+            history.record(copyTarget);
         }
 
         return history;
     }
 
-    public void clearHistory(){this.history.clear();}
+    public void clearHistory(){
+        history.record(target);
+        this.history.clear();}
 
     public int[] getOriginalArray(){
         return target;
@@ -55,7 +58,5 @@ public class Sorter {
         target[i] = target[j];
         target[j] = temp;
     }
-
-
 
 }
