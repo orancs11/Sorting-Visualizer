@@ -21,7 +21,9 @@ public class App
         JPanel upperPanel = new JPanel();
         JPanel labelPanel = new JPanel();
         upperPanel.setLayout(new BoxLayout(upperPanel, BoxLayout.Y_AXIS));
+
         JPanel barPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 10));
+
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
@@ -50,6 +52,7 @@ public class App
             Bar bar = new Bar(width, height, 0, 25, Color.lightGray);
             barPanel.add(bar);
         }
+
         labelPanel.add(label);
         inputPanel.add(inputField);
         inputPanel.add(sendButton);
