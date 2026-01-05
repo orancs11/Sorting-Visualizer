@@ -17,7 +17,6 @@ public class BarPanel extends JPanel {
     public void createBars(int[] target){
         int length = target.length;
         if(length == 0) throw new EmptyStackException();
-
         // Set width for all bars
         int barWidth = 100 / length;
         for(int number : target){

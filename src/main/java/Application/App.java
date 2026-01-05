@@ -14,8 +14,6 @@ import java.awt.event.ActionListener;
 public class App
 {
     public static void main( String[] args ) {
-
-
         JFrame frame = new JFrame();
         JPanel inputPanel = new JPanel(new FlowLayout());
         JPanel upperPanel = new JPanel();
@@ -67,6 +65,5 @@ public class App
         frame.pack();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
-
     }
 }
