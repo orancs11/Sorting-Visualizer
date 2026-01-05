@@ -34,27 +34,34 @@ public class SceneBuilder {
         barPanel.createBars(iteration);
         lowerPanel.add(barPanel);
     }
+
     private void prepareMainPanel(){
         mainPanel.add(upperPanel);
         mainPanel.add(lowerPanel);
     }
+
     private void prepareScene(){
         frame.getContentPane().add(mainPanel);
         frame.pack();
     }
-    private void renderLowerPanel(Recorder history){
-        for(int [] iteration : history){
+
+    private void renderLowerPanel(int[] iteration){
             this.lowerPanel.remove(barPanel);
             barPanel.removeAll();
             barPanel.createBars(iteration);
-        }
     }
+
     private void initiate(){
         prepareUpperPanel();
         prepareLowerPanel(new int[]{1, 2, 3, 4, 5});
         prepareMainPanel();
         prepareScene();
+    }
 
+    public void playRecord(Recorder recorder){
+        for(int[] iteration : recorder){
+            renderLowerPanel(iteration);
+        }
     }
 
 }
