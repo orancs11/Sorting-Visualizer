@@ -73,7 +73,15 @@ public class SceneBuilder {
 
     public void playRecord(Recorder recorder){
         for(int[] iteration : recorder){
-            renderLowerPanel(iteration);
+            try{
+                renderLowerPanel(iteration);
+                Thread.sleep(1000);
+                System.out.println("1000 millisecond sleep here ...");
+            }
+            catch(InterruptedException e){
+                e.printStackTrace();
+                Thread.currentThread().interrupt();
+            }
         }
     }
 

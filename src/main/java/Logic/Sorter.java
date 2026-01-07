@@ -26,7 +26,7 @@ public class Sorter {
             for(int j = 1; j < size - i; j++)
                 if(target[j - 1] > target[j]){
                     swap(j - 1, j);
-                    history.record(target);
+                    save();
                 };
 
         isSorted = true;
@@ -43,7 +43,7 @@ public class Sorter {
             for(int j = i + 1; j < size; j++)
                 if(target[j] < target[minIndex]) minIndex = j;
             swap(i, minIndex);
-            history.record(target);
+            save();
         }
         isSorted = true;
         return history;
@@ -69,6 +69,9 @@ public class Sorter {
     private void clearTarget(){
         target = Utilities.copyArray(original);
         isSorted = false;
+    }
+    private void save(){
+        history.record(Utilities.copyArray(target));
     }
 
 }
