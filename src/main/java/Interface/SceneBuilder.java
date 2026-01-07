@@ -1,5 +1,6 @@
 package Interface;
 
+import Logic.Utilities;
 import Model.Recorder;
 
 import javax.swing.*;
@@ -34,7 +35,6 @@ public class SceneBuilder {
 
 
     private void prepareUpperPanel(){
-
         upperPanel.add(inputPanel);
     }
     private void prepareLowerPanel(int[] iteration){
@@ -54,10 +54,9 @@ public class SceneBuilder {
     }
 
     private void renderLowerPanel(int[] iteration){
-            this.lowerPanel.remove(barPanel);
-            barPanel.removeAll();
-            barPanel.createBars(iteration);
-            lowerPanel.add(barPanel);
+        barPanel.removeAll();
+        barPanel.createBars(iteration);
+        barPanel.revalidate();
     }
 
     private void initiate(){
@@ -73,15 +72,9 @@ public class SceneBuilder {
 
     public void playRecord(Recorder recorder){
         for(int[] iteration : recorder){
-            try{
-                renderLowerPanel(iteration);
-                Thread.sleep(1000);
-                System.out.println("1000 millisecond sleep here ...");
-            }
-            catch(InterruptedException e){
-                e.printStackTrace();
-                Thread.currentThread().interrupt();
-            }
+            renderLowerPanel(iteration);
+            Utilities.wait(3);
+            System.out.println("I believe it waits 3 seconds");
         }
     }
 

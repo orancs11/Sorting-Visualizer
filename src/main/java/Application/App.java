@@ -18,7 +18,7 @@ public class App
 {
     public static void main( String[] args ) {
         int[] target = Utilities.createArray(20, true);
-
+        System.out.println("Here is a function representation");
         System.out.println("Original target");
         String originalVersionTarget = Utilities.toStringArray(target);
         System.out.println(originalVersionTarget);
