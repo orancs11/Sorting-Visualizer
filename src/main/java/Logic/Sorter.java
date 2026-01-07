@@ -9,6 +9,7 @@ public class Sorter {
     private int[] target;
     private int[] original;
     private boolean isSorted;
+
     public Sorter(int[] array){
         original = array;
         history = new Recorder();

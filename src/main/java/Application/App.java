@@ -17,14 +17,13 @@ import java.awt.event.ActionListener;
 public class App
 {
     public static void main( String[] args ) {
-        int[] target = Utilities.createArray(20, true);
-        System.out.println("Here is a function representation");
-        System.out.println("Original target");
-        String originalVersionTarget = Utilities.toStringArray(target);
-        System.out.println(originalVersionTarget);
-        System.out.println("Sorter is created");
+        int[] original = Utilities.createArray(20, true);
 
-        Sorter sorter = new Sorter(target);
+        System.out.println("Original target");
+        String originalVersionTarget = Utilities.toStringArray(original);
+        System.out.println(originalVersionTarget);
+
+        Sorter sorter = new Sorter(original);
         Recorder recorder = sorter.selectionSort();
 
         System.out.println("Sorted version of target");
@@ -32,8 +31,8 @@ public class App
         System.out.println(newVersionTarget);
 
         SceneBuilder sceneBuilder = new SceneBuilder(1000, 1000);
-        sceneBuilder.display();
+        sceneBuilder.display(original);
         //System.out.println(recorder);
-        sceneBuilder.playRecord(recorder);
+        //sceneBuilder.playRecord(recorder);
     }
 }

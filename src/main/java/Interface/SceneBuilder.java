@@ -66,7 +66,13 @@ public class SceneBuilder {
         prepareScene();
     }
 
+
     public void display(){
+        frame.setVisible(true);
+    }
+
+    public void display(int[] original){
+        renderLowerPanel(original);
         frame.setVisible(true);
     }
 

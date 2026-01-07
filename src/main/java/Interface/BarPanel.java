@@ -11,17 +11,17 @@ public class BarPanel extends JPanel {
     private final int X = 0, Y = 0;
 
     public BarPanel(){
-        super(new FlowLayout(FlowLayout.CENTER, 0, 10));
+        super(new FlowLayout(FlowLayout.CENTER, 0, 250));
     }
 
     public void createBars(int[] target){
         int length = target.length;
         if(length == 0) throw new EmptyStackException();
-        int barWidth = 100 / length; // Set width for all bars
+        int barWidth = 900 / length; // Set width for all bars
 
         for(int number : target){
-            int barHeight = 5 * number;
-            Bar tempBar = new Bar(barWidth, barHeight, X, Y, BAR_COLOR);
+            int barHeight = 10 * number;
+            Bar tempBar = new Bar(barWidth, barHeight, X, Y- (barHeight / 2), BAR_COLOR);
             this.add(tempBar);
         }
     }

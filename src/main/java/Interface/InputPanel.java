@@ -16,7 +16,7 @@ public class InputPanel extends JPanel {
         setButton = new JButton("Set Array Size");
         setButton.addActionListener(setButtonActionListener());
 
-        unsortButton = new JButton("Unsort Array");
+        unsortButton = new JButton("Shuffle");
         unsortButton.addActionListener(setUnsortButtonActionListener());
 
         textField = new JTextField("Enter Number", 20);
@@ -32,7 +32,7 @@ public class InputPanel extends JPanel {
         return new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                warningLabel.setText("FILL ME WITH SOMETHING"); // Unload Label Text
+                warningLabel.setText("Set Array Size button is pressed");
             }
         };
     }
@@ -42,7 +42,8 @@ public class InputPanel extends JPanel {
         return new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                warningLabel.setText("FILL ME WITH SOMETHING"); // Unload Label Text
+                warningLabel.setText("Shuffle button is pressed");
+
             }
         };
     }
