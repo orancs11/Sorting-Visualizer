@@ -26,7 +26,7 @@ public class Utilities {
         for(int i = 0; i < size; i++){
             int currNumber = i;
             if(isRandom){
-                currNumber = random.nextInt(100);
+                currNumber = random.nextInt(100) + 1;
             }
             result[i] = currNumber;
         }

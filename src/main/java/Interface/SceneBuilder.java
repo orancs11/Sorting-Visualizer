@@ -10,33 +10,24 @@ public class SceneBuilder {
 
     private JFrame frame;
     private JPanel mainPanel;
-    private JPanel upperPanel;
     private JPanel lowerPanel;
     private BarPanel barPanel;
-    private InputPanel inputPanel;
 
     public SceneBuilder(int width, int height){
-        frame = new JFrame();
+        frame = new JFrame("Visualizer");
         frame.setPreferredSize(new Dimension(Math.max(500, width), Math.max(500, height)));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
-        upperPanel = new JPanel();
-        upperPanel.setLayout(new BoxLayout(upperPanel, BoxLayout.Y_AXIS)); // This might be unnecessary
-
         lowerPanel = new JPanel();
         barPanel = new BarPanel();
-        inputPanel = new InputPanel();
 
         initiate();
     }
 
 
-    private void prepareUpperPanel(){
-        upperPanel.add(inputPanel);
-    }
     private void prepareLowerPanel(int[] iteration){
         barPanel.removeAll();
         barPanel.createBars(iteration);
@@ -44,7 +35,6 @@ public class SceneBuilder {
     }
 
     private void prepareMainPanel(){
-        mainPanel.add(upperPanel);
         mainPanel.add(lowerPanel);
     }
 
@@ -60,7 +50,6 @@ public class SceneBuilder {
     }
 
     private void initiate(){
-        prepareUpperPanel();
         prepareLowerPanel(new int[]{1, 2, 3, 4, 5});
         prepareMainPanel();
         prepareScene();
@@ -77,10 +66,10 @@ public class SceneBuilder {
     }
 
     public void playRecord(Recorder recorder){
+
         for(int[] iteration : recorder){
             renderLowerPanel(iteration);
-            Utilities.wait(3);
-            System.out.println("I believe it waits 3 seconds");
+            Utilities.wait(1);
         }
     }
 

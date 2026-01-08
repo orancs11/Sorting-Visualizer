@@ -17,22 +17,14 @@ import java.awt.event.ActionListener;
 public class App
 {
     public static void main( String[] args ) {
-        int[] original = Utilities.createArray(20, true);
-
-        System.out.println("Original target");
-        String originalVersionTarget = Utilities.toStringArray(original);
-        System.out.println(originalVersionTarget);
+        int[] original = Utilities.createArray(100, true);
 
         Sorter sorter = new Sorter(original);
-        Recorder recorder = sorter.selectionSort();
+        Recorder recorder = sorter.bubbleSort();
 
-        System.out.println("Sorted version of target");
-        String newVersionTarget = Utilities.toStringArray(sorter.getSortedArray());
-        System.out.println(newVersionTarget);
 
-        SceneBuilder sceneBuilder = new SceneBuilder(1000, 1000);
+        SceneBuilder sceneBuilder = new SceneBuilder(1920, 1080);
         sceneBuilder.display(original);
-        //System.out.println(recorder);
-        //sceneBuilder.playRecord(recorder);
+        sceneBuilder.playRecord(recorder);
     }
 }
