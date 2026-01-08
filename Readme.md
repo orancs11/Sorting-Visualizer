@@ -30,6 +30,7 @@ A Java Swing application that visualizes standard sorting algorithms like Bubble
     ```
 
 ### Usage
+#### For now there is no need to use maven. Probably in later versions I will use additional libraries to make it more robust.
 
 1.  Compile the project using Maven:
     ```bash
